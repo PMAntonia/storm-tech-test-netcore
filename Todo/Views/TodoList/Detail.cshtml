@@ -21,6 +21,11 @@
             <span style="float:right">
                 <label><input id="hideIsDone" type="checkbox" onchange="toggleIsDoneCheckbox()" /> Hide marked items</label>
             </span>
+
+            <span style="float:right">
+                <label><input id="orderByRank" type="checkbox" onchange="" /> Order by Rank</label>&ensp;
+            </span>
+
         </li>
 
         @foreach (var item in Model.Items.OrderBy(item => item.Importance))
