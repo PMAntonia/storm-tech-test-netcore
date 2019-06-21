@@ -20,11 +20,11 @@ namespace Todo.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create(int todoListId)
+        public PartialViewResult Create(int todoListId)
         {
             var todoList = dbContext.SingleTodoList(todoListId);
             var fields = TodoItemCreateFieldsFactory.Create(todoList, User.Id());
-            return View(fields);
+            return PartialView(fields);
         }
 
         [HttpPost]

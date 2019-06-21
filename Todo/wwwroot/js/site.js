@@ -15,3 +15,19 @@ function toggleIsDoneCheckbox() {
         }
     });
 }
+
+function create(todoListId) {
+    $("#myModal").modal({ backdrop: "static", keyboard: false, show: false });
+    $.ajax({
+        url: '/todoitem/create',
+        data: { todoListId: todoListId },
+        success: function (html) {
+            $('#create').html(html);
+            $('#create').modal('show');
+        },
+        error: function (html) {
+            $('#create').modal('hide');
+        }
+    });
+
+}

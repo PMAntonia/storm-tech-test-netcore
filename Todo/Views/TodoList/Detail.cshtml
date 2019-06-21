@@ -14,7 +14,7 @@
     <ul class="list-group">
 
         <li class="list-group-item">
-            <a asp-action="Create" asp-controller="TodoItem" asp-route-todoListId="@Model.TodoListId">
+             <a href="#" class="btn" data-toggle="modal" onclick="create(@Model.TodoListId)">
                 <strong>Add New Item</strong>
             </a>
 
@@ -76,3 +76,5 @@
         }
     </ul>
 </div>
+
+<div id="create" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-confirm-cancel-label" aria-hidden="true"></div>
